@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+search_logs.csv
+
+# OS / Editor
+.DS_Store
+.vscode/
+
+# Data (optional – remove if you want to upload dataset)
+# Large datasets
+*.csv
+data/
