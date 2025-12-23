@@ -11,8 +11,11 @@ import streamlit as st
 # -------------------------------
 # 1. API Key & Pinecone Setup
 # -------------------------------
-PINECONE_API_KEY = "pcsk_4Bsv1R_2W4YXEMLjaKMziE3wbZjWb4pkrUW5VxHqdHx5sBMbTChaBRotFtxmtiveCjYa8L"
-os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
+from dotenv import load_dotenv
+
+load_dotenv()
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
 index_name = "amazon-reviews-index"
